@@ -1,0 +1,345 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Slab', serif;
+}
+.header{
+    min-height: 75vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(46, 48, 54, 0.3),rgba(36, 37, 41, 0.836)),url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.head img {
+    position:relative;
+    margin-left: 20%;
+    margin-right: 50%;
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/*----------- links to people's albums -------*/
+
+nav img{
+    height: 110px;
+    width: 110px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px;
+    position: relative;
+}
+nav a{
+        color:rgb(95, 160, 100);
+        font-size: larger;
+        font-weight: 800;
+        text-decoration: none;}   
+nav a:visited{
+        color: rgb(97, 160, 95);
+        background-color: transparent;
+        text-decoration: none;
+}
+.dropdown.active > .link,
+nav a:hover{
+        color:rgb(30, 117, 39);
+        background-color: transparent;
+        text-decoration: none;
+}
+
+nav a:active{
+        color: hotpink;
+        background-color: transparent;
+        text-decoration: none;
+}
+.nav-links ul li::after {
+    content:'';
+    width: 0%;
+    height: 2px;
+    text-shadow: none;
+    background: #9aa39b; 
+    display:block;
+    margin: auto;
+    transition:.5s;
+}
+.nav-links ul li:hover::after {
+    width:100%;
+}
+.nav-links ul li:hover {
+    text-shadow: .5px .5px 1px #d4d4d4;
+    transition: .3s;
+}
+/*-----------Dropdowns------------*/
+
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    left: 70%;
+    color: #ffffff;
+    top: calc(100 + .25rem);
+    background-color: #00000059;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+}
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: .25rem;
+}
+.dropdown-links {
+    padding: .25rem;
+    display:flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+/*----------- title -------*/
+
+.text-box{
+    width:90%;
+    color: rgb(54, 141, 105);
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 110px;
+    text-shadow: 2px 2px 5px #ffffff;
+}
+.text-box p{
+    font-size: 25px;
+    font-weight: 600;
+    color: #869695;
+}
+
+/*----------- button -------*/
+
+.text-box a{
+    color:rgb(30, 117, 39)
+}
+.text-box a:hover{ 
+    color:rgb(255, 255, 255);
+}
+.box-btn {
+    margin: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: bisque;
+    border: 1px solid bisque;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;
+}
+.box-btn:hover {
+    border: 20px solid #ffffff;
+    background:#24242498;
+    transition: 1s;
+}
+.flourish{
+    margin-top: 500px;
+    height: 140px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+p{
+    color:#28726e;
+    font-size: medium;
+    font-weight: 550;
+    line-height: 22px;
+    padding: 10px;
+}
+
+/*----------- albums -------*/
+
+.albums{
+    width: auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 60px;
+    color:rgb(16, 121, 86); 
+}
+p{
+    color:#565656;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.album-col{
+    flex-basis:32%;
+    background:rgba(38, 80, 27, 0.61);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12 px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+/*    margin-left: 100px;
+    margin-right: 100px;*/
+}
+.album-col img{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width:420px;
+    height:auto; 
+    overflow: hidden; 
+    margin-top: 30px;
+    border-radius: 5px;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 5px;
+}
+.album-col:hover{
+    box-shadow: 0 0 20px rgba(36, 37, 41, 0.836);
+    transition: .2s;
+    background-color: #4b4a4ad5;
+    cursor: pointer;
+}
+/*.album-col img:hover{
+    width: 350px;
+    max-height: 550px;
+    transition: .5s;
+    margin-top: 0px;
+}*/
+/*.album-col:hover::after{
+    flex-basis:0%;
+    background:rgba(15, 53, 4, 0.459);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12 px;
+    box-sizing: border-box;
+    margin-left: 100px;
+    margin-right: 100px;
+    transition: .3s;
+}*/
+
+/*----------- events (static images) -------*/
+
+.events h1{
+    width: auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.events p{
+    text-align: center;
+}
+.memories-col{
+    flex-basis:31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.memories-col img{
+    width: 90%;
+    border-radius: 25px;
+    margin: 10px 10px;
+}
+.memories-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*----------- family messages -------*/
+
+.notes{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.notes-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #3e795660;
+    padding: 25px;
+    cursor:pointer;
+    display: flex;
+}
+.notes-col img{
+    height:40px;
+    margin-left: 5px;
+    margin-right: 20px;
+    border-radius: 50%; 
+}
+.notes-col p{
+    padding: 0;
+}
+.notes-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* -------------CALL TO ACTION---------------*/
+
+.cta{
+    margin: 100px auto;
+    width:80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding:100px 0;  
+    color: #30a561;
+}
+.cta a{
+    color: #149b4c;
+}
+.cta a:hover{
+    color:#ffffff  
+}
+
+/*----------------FOOTER------------*/
+
+.footer{
+    width:100%;
+    color: #149b4c;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
