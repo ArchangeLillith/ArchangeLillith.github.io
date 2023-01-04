@@ -20,6 +20,11 @@
     border-radius: 20px;
 }
 
+.logo {
+    font-size: 4em;
+    position: absolute;
+    padding: 10px 10px;
+}
 /*----------- links to people's albums -------*/
 
 nav img{
@@ -31,35 +36,44 @@ nav img{
     text-align: right;
     padding-right: 20px;
 }
-.nav-links ul li{
+.nav-links button{
     list-style: none;
     display: inline-block;
-    padding: 8px;
+    padding: 20px;
     position: relative;
+    box-shadow: none;
+    display: inline-block;
+    border:none;
+    background-color: none;
+    background: none;
+    color:rgb(49, 49, 49);
+    font-size: larger;
+    font-weight: 800;
+    text-decoration: none;
 }
 nav a{
-        color:rgb(95, 160, 100);
+        color:rgb(49, 49, 49);
         font-size: larger;
         font-weight: 800;
         text-decoration: none;}   
 nav a:visited{
-        color: rgb(97, 160, 95);
+        color: rgb(168, 168, 168);
         background-color: transparent;
         text-decoration: none;
 }
-.dropdown.active > .link,
+/* .dropdown.active > .link,
 nav a:hover{
-        color:rgb(30, 117, 39);
+        color:rgb(20, 11, 102);
         background-color: transparent;
         text-decoration: none;
-}
+} */
 
 nav a:active{
-        color: hotpink;
+        color: rgb(90, 90, 90);
         background-color: transparent;
         text-decoration: none;
 }
-.nav-links ul li::after {
+.nav-links button::after {
     content:'';
     width: 0%;
     height: 2px;
@@ -69,11 +83,11 @@ nav a:active{
     margin: auto;
     transition:.5s;
 }
-.nav-links ul li:hover::after {
+.nav-links button:hover::after {
     width:100%;
 }
-.nav-links ul li:hover {
-    text-shadow: .5px .5px 1px #d4d4d4;
+.nav-links button:hover {
+    text-shadow: .5px .5px 1px #727272;
     transition: .3s;
 }
 /*-----------Dropdowns------------*/
@@ -83,7 +97,7 @@ nav a:active{
 }
 .dropdown-menu {
     position: absolute;
-    left: 70%;
+    left: 80%;
     color: #ffffff;
     top: calc(100 + .25rem);
     background-color: #00000059;
@@ -115,7 +129,7 @@ nav a:active{
 
 .text-box{
     width:90%;
-    color: rgb(54, 141, 105);
+    color: rgb(194, 194, 194);
     position: absolute;
     top: 50%;
     left: 50%;  
@@ -135,7 +149,7 @@ nav a:active{
 /*----------- button -------*/
 
 .text-box a{
-    color:rgb(30, 117, 39)
+    color:rgb(247, 247, 247)
 }
 .text-box a:hover{ 
     color:rgb(255, 255, 255);
@@ -184,7 +198,7 @@ p{
 }
 h1{
     font-size: 60px;
-    color:rgb(16, 121, 86); 
+    color:rgb(202, 206, 205); 
 }
 p{
     color:#565656;
