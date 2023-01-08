@@ -25,6 +25,7 @@
     position: absolute;
     padding: 10px 10px;
 }
+
 /*----------- LINKS -------*/
 
 nav img{
@@ -65,12 +66,6 @@ nav a:visited{
         background-color: transparent;
         text-decoration: none;
 }
-/* .dropdown.active > .link,
-nav a:hover{
-        color:rgb(20, 11, 102);
-        background-color: transparent;
-        text-decoration: none;
-} */
 
 nav a:active{
         color: rgb(70, 70, 70);
@@ -152,29 +147,6 @@ nav a:active{
 
 /*----------- FLOURISH -------*/
 
-/* .text-box a{
-    color:rgb(247, 247, 247)
-}
-.text-box a:hover{ 
-    color:rgb(255, 255, 255);
-}
-.box-btn {
-    margin: 30px;
-    display: inline-block;
-    text-decoration: none;
-    color: bisque;
-    border: 1px solid bisque;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor:pointer;
-}
-.box-btn:hover {
-    border: 20px solid #ffffff;
-    background:#ffffff98;
-    transition: 1s;
-} */
 .flourish{
     margin-top: 500px;
     height: 140px;
@@ -184,13 +156,6 @@ nav a:active{
     display: block;
     position: relative;
 }
-/* p{
-    color:#28726e;
-    font-size: medium;
-    font-weight: 550;
-    line-height: 22px;
-    padding: 10px;
-} */
 
 /*----------- PROJECTS -------*/
 
@@ -260,23 +225,6 @@ h3{
     background-color: #646464d5;
     cursor: pointer;
 }
-/*.album-col img:hover{
-    width: 350px;
-    max-height: 550px;
-    transition: .5s;
-    margin-top: 0px;
-}*/
-/*.album-col:hover::after{
-    flex-basis:0%;
-    background:rgba(15, 53, 4, 0.459);
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12 px;
-    box-sizing: border-box;
-    margin-left: 100px;
-    margin-right: 100px;
-    transition: .3s;
-}*/
 
 /*----------- ABOUT ME -------*/
 
