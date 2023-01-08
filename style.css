@@ -25,18 +25,22 @@
     position: absolute;
     padding: 10px 10px;
 }
-/*----------- links to people's albums -------*/
+/*----------- LINKS -------*/
 
 nav img{
     height: 110px;
     width: 110px;
+}
+
+.about p {
+    padding: 2% 15%;
 }
 .nav-links{
     flex: 1;
     text-align: right;
     padding-right: 20px;
 }
-.nav-links button{
+.nav-links a{
     list-style: none;
     display: inline-block;
     padding: 20px;
@@ -46,7 +50,7 @@ nav img{
     border:none;
     background-color: none;
     background: none;
-    color:rgb(49, 49, 49);
+    color:rgb(158, 158, 158);
     font-size: larger;
     font-weight: 800;
     text-decoration: none;
@@ -69,11 +73,11 @@ nav a:hover{
 } */
 
 nav a:active{
-        color: rgb(90, 90, 90);
+        color: rgb(70, 70, 70);
         background-color: transparent;
         text-decoration: none;
 }
-.nav-links button::after {
+.nav-links a::after {
     content:'';
     width: 0%;
     height: 2px;
@@ -83,14 +87,14 @@ nav a:active{
     margin: auto;
     transition:.5s;
 }
-.nav-links button:hover::after {
+.nav-links a:hover::after {
     width:100%;
 }
-.nav-links button:hover {
+.nav-links a:hover {
     text-shadow: .5px .5px 1px #727272;
     transition: .3s;
 }
-/*-----------Dropdowns------------*/
+/*-----------DROPDOWNS------------*/
 
 .dropdown {
     position: relative;
@@ -125,7 +129,7 @@ nav a:active{
     flex-direction: column;
     gap: .5rem;
 }
-/*----------- title -------*/
+/*----------- TITLE -------*/
 
 .text-box{
     width:90%;
@@ -146,9 +150,9 @@ nav a:active{
     color: #869695;
 }
 
-/*----------- button -------*/
+/*----------- FLOURISH -------*/
 
-.text-box a{
+/* .text-box a{
     color:rgb(247, 247, 247)
 }
 .text-box a:hover{ 
@@ -168,9 +172,9 @@ nav a:active{
 }
 .box-btn:hover {
     border: 20px solid #ffffff;
-    background:#24242498;
+    background:#ffffff98;
     transition: 1s;
-}
+} */
 .flourish{
     margin-top: 500px;
     height: 140px;
@@ -180,41 +184,52 @@ nav a:active{
     display: block;
     position: relative;
 }
-p{
+/* p{
     color:#28726e;
     font-size: medium;
     font-weight: 550;
     line-height: 22px;
     padding: 10px;
-}
+} */
 
-/*----------- albums -------*/
+/*----------- PROJECTS -------*/
 
-.albums{
+.about{
     width: auto;
     margin: auto;
     text-align: center;
     padding-top: 100px;
 }
-h1{
+.about h1{
     font-size: 60px;
     color:rgb(202, 206, 205); 
+    margin-right: 30%;
 }
-p{
-    color:#565656;
-    font-size: 14px;
-    font-weight: 300;
+.about-box {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+}
+.about p{
+    margin-top: 80px;
+    width: 60%;
+    color:#000000;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 22px;
     padding: 10px;
+    border-bottom: 2px solid rgb(143, 143, 143);
+    height: 200px;
+}
+img {
+    border-radius: 10px;
 }
 .row{
-    margin-top: 5%;
     display: flex;
-    justify-content: space-between;
 }
 .album-col{
     flex-basis:32%;
-    background:rgba(38, 80, 27, 0.61);
+    background:rgba(153, 153, 153, 0.61);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12 px;
@@ -240,9 +255,9 @@ h3{
     margin: 5px;
 }
 .album-col:hover{
-    box-shadow: 0 0 20px rgba(36, 37, 41, 0.836);
+    box-shadow: 0 0 20px rgba(206, 215, 255, 0.836);
     transition: .2s;
-    background-color: #4b4a4ad5;
+    background-color: #646464d5;
     cursor: pointer;
 }
 /*.album-col img:hover{
@@ -263,7 +278,7 @@ h3{
     transition: .3s;
 }*/
 
-/*----------- events (static images) -------*/
+/*----------- ABOUT ME -------*/
 
 .events h1{
     width: auto;
@@ -280,10 +295,11 @@ h3{
     margin-bottom: 5%;
     text-align: left;
 }
-.memories-col img{
-    width: 90%;
+.memories-col iframe{
+    width: 100%;
+    height: 175%;
     border-radius: 25px;
-    margin: 10px 10px;
+    margin-left: 110%;
 }
 .memories-col h3{
     margin-top: 16px;
@@ -291,7 +307,7 @@ h3{
     text-align: left;
 }
 
-/*----------- family messages -------*/
+/*----------- VIDEO -------*/
 
 .notes{
     width: 80%;
@@ -323,21 +339,15 @@ h3{
     text-align: left;
 }
 
-/* -------------CALL TO ACTION---------------*/
+/* -------------CONTACT---------------*/
 
 .cta{
-    margin: 100px auto;
-    width:80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/banner.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
     text-align: center;
-    padding:100px 0;  
-    color: #30a561;
+    padding: 100px 50px 0px;  
+    color: #3a3a3a;
 }
 .cta a{
-    color: #149b4c;
+    color: #464646;
 }
 .cta a:hover{
     color:#ffffff  
@@ -346,14 +356,21 @@ h3{
 /*----------------FOOTER------------*/
 
 .footer{
-    width:100%;
-    color: #149b4c;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/banner.jpg);
+    background-position: center;
+    background-size: cover;
     text-align: center;
-    padding: 30px 0;
+    padding:75px 0;  
+    color: #ffffff;
+    width:100%;
+    height: 5em;
+    color: #b8b8b8;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
 
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
+.footer p{
+    color: white;
+    margin-top: 30px;
 }
