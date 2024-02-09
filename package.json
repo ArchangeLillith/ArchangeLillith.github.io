@@ -1,0 +1,14 @@
+{
+  "name": "y",
+  "version": "2.0.0",
+  "description": "Personal portfolio to be hosted on Github Pages",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aria Walford",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
