@@ -1,9 +1,10 @@
 VanillaTilt.init(document.querySelectorAll(".card"), {
 	max: 25,
 	speed: 800,
-	glare: true,
+	glare: false,
 	"max-glare": 1,
 });
+console.log(`The script is being seen`);
 
 document.addEventListener("click", (e) => {
 	const isDropdownButton = e.target.matches("[data-dropdown-button]");
