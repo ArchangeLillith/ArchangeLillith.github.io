@@ -1,7 +1,12 @@
+@font-face {
+	font-family: "MyFont"; /*a name to be used later*/
+	src: url("/assets/Myfont-Regular.ttf"); /*URL to font*/
+}
+
 * {
 	margin: 0;
+	font-family: "MyFont";
 	padding: 0;
-	font-family: "Josefin Slab", serif;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
@@ -11,10 +16,33 @@
 	justify-content: center;
 	align-items: center;
 	display: flex;
+	font-size: x-large;
 	flex-direction: row;
 	flex-wrap: wrap;
 	min-height: 100vh;
 	background-color: #7e967a;
+}
+
+.corner-flowers-top {
+	position: absolute;
+	height: 100%;
+	top: -145px;
+	left: -10px;
+	opacity: 0;
+	transform: scale(50%);
+	transition-duration: 1s;
+	transform-origin: top left;
+}
+
+.corner-flowers-bottom {
+	position: absolute;
+	height: 100%;
+	bottom: -25;
+	right: 0;
+	opacity: 0;
+	transform: scale(50%);
+	transition-duration: 0.7s;
+	transform-origin: bottom right;
 }
 
 .card-container::before {
@@ -26,7 +54,7 @@
 	height: 100%;
 	background: rgb(12, 32, 9);
 	clip-path: circle(40% at right 100%);
-	z-index: 3;
+	z-index: 1;
 }
 
 .card-container::after {
@@ -78,6 +106,10 @@
 .container .card:hover .content {
 	transform: translateY(0px);
 }
+.container .card:hover img[class^="corner-flowers"] {
+	opacity: 0.7;
+	transform: scale(100%);
+}
 
 .container .card .content h2 {
 	position: absolute;
@@ -98,6 +130,7 @@
 	color: rgb(209, 255, 220);
 	font-weight: 300;
 }
+
 .container .card .content a {
 	position: relative;
 	display: inline-block;
@@ -124,7 +157,7 @@
 }
 
 .logo {
-	font-size: 4em;
+	font-size: 3em;
 	position: absolute;
 	left: 10px;
 	top: 10px;
