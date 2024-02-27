@@ -4,7 +4,6 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
 	glare: false,
 	"max-glare": 1,
 });
-console.log(`The script is being seen`);
 
 document.addEventListener("click", (e) => {
 	const isDropdownButton = e.target.matches("[data-dropdown-button]");
@@ -29,3 +28,31 @@ document.addEventListener("click", (e) => {
 		dropdown.classList.remove("active");
 	});
 });
+
+//Flower handler
+const flowerObserver = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry);
+		if (entry.isIntersecting) {
+			entry.target.classList.add("show-flowers");
+		} else {
+			entry.target.classList.remove("show-flowers");
+		}
+	});
+});
+const hiddenFlowers = document.querySelectorAll(".hide-flowers");
+hiddenFlowers.forEach((el) => flowerObserver.observe(el));
+
+//Section handler
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		console.log(entry);
+		if (entry.isIntersecting) {
+			entry.target.classList.add("show-section");
+		} else {
+			entry.target.classList.remove("show-section");
+		}
+	});
+});
+const hiddenElements = document.querySelectorAll(".hide-section");
+hiddenElements.forEach((el) => observer.observe(el));

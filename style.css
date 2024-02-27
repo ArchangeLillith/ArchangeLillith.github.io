@@ -1,14 +1,37 @@
+/* Import my writing to be the font */
+/* DISPLAY */
 @font-face {
-	font-family: "MyFont"; /*a name to be used later*/
-	src: url("/assets/Myfont-Regular.ttf"); /*URL to font*/
+	font-family: "Handwriting"; /*a name to be used later*/
+	src: url("/assets/Zeyada-Regular.ttf"); /*URL to font*/
+}
+
+/* HEADING */
+@font-face {
+	font-family: "Heading"; /*a name to be used later*/
+	src: url("/assets/BadScript-Regular.ttf"); /*URL to font*/
+}
+
+/* LABLE */
+@font-face {
+	font-family: Comfortaa; /*a name to be used later*/
+	src: url("/assets/Comfortaa-VariableFont_wght.ttf"); /*URL to font*/
 }
 
 * {
 	margin: 0;
-	font-family: "MyFont";
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+}
+.projects-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 120vh;
+	background-color: #7e967a;
 }
 
 .card-container {
@@ -16,11 +39,28 @@
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	font-size: x-large;
 	flex-direction: row;
 	flex-wrap: wrap;
 	min-height: 100vh;
 	background-color: #7e967a;
+}
+
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	min-height: 800px;
+	width: 900px;
+	margin: 30px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	background: rgba(255, 255, 255, 0.111);
+	overflow: hidden;
+	border-top: 1px solid rgba(255, 255, 255, 0.47);
+	border-left: 1px solid rgba(255, 255, 255, 0.47);
+	backdrop-filter: blur(5px);
 }
 
 .corner-flowers-top {
@@ -45,18 +85,6 @@
 	transform-origin: bottom right;
 }
 
-.card-container::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgb(12, 32, 9);
-	clip-path: circle(40% at right 100%);
-	z-index: 1;
-}
-
 .card-container::after {
 	content: "";
 	position: absolute;
@@ -67,7 +95,20 @@
 	background: rgb(40, 79, 49);
 	clip-path: circle(40% at 10% 10%);
 }
-
+.about {
+	background-image: linear-gradient(
+			rgba(0, 0, 0, 0.9) 0%,
+			rgba(0, 0, 0, 0.467) 10%,
+			#7e967aa9
+		),
+		url("assets/woods.jpg");
+	margin-top: -10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	justify-content: center;
+}
 .container {
 	position: relative;
 	display: flex;
@@ -118,31 +159,72 @@
 	font-size: 8em;
 	color: #bffcdd25;
 	z-index: 1;
+	pointer-events: none;
 }
 .container .card .content h3 {
-	font-size: 1.8em;
+	font-family: "Heading";
+	font-size: 30px;
+	font-weight: 100;
 	color: #d8f7e0;
 	z-index: 1;
 }
 
 .container .card .content p {
-	font-size: 1em;
+	font-family: "Comfortaa";
+	font-size: 15px;
+	font-weight: 100;
 	color: rgb(209, 255, 220);
 	font-weight: 300;
+	cursor: default;
+}
+
+.container .card:hover .content p {
+	color: rgb(243, 255, 238);
+}
+
+.container .card:hover .content h3 {
+	color: rgb(243, 255, 238);
+}
+
+.section-title {
+	z-index: 1;
+	font-family: "Handwriting";
+	font-size: 75px;
+	margin-bottom: -70px;
+	color: #5f705b;
+	margin-top: 10px;
+}
+.about-title {
+	z-index: 1;
+	font-family: "Handwriting";
+	font-size: 75px;
+	margin-bottom: -70px;
+	color: #cadcc6;
+	margin-top: 10px;
 }
 
 .container .card .content a {
+	z-index: 1;
+	font-weight: 100;
+	font-size: 25px;
+	font-family: "Handwriting";
 	position: relative;
 	display: inline-block;
-	padding: 8px 20px;
-	margin-top: 15px;
-	background: #b8b8b8;
+	padding: 10px 20px 6px 20px;
+	margin-top: 20px;
 	color: rgb(209, 255, 220);
 	border-radius: 20px;
 	text-decoration: none;
+	cursor: pointer;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
+.container .card .content a svg {
+	height: 10px;
+	margin-left: 10px;
+	width: auto;
+	margin-bottom: 1px;
+}
 .header {
 	height: 75px;
 	width: 100%;
@@ -157,11 +239,13 @@
 }
 
 .logo {
-	font-size: 3em;
+	font-size: 60px;
 	position: absolute;
 	left: 10px;
-	top: 10px;
+	top: 0px;
 	z-index: 5;
+	font-weight: 100;
+	font-family: "Handwriting";
 }
 /* -------------PROJECTS--------------- */
 .projects {
@@ -198,21 +282,20 @@
 	background-color: none;
 	background: none;
 	color: rgb(202, 255, 198);
-	font-size: larger;
-	font-weight: 800;
+	font-size: 35px;
+	font-weight: 500;
 	text-decoration: none;
 	text-shadow: rgb(18, 65, 29) 1px 0 10px;
 }
 
 nav a {
 	color: rgb(49, 49, 49);
-	font-size: larger;
-	font-weight: 800;
 	text-decoration: none;
+	font-family: "Handwriting";
 }
 
 nav a:visited {
-	color: rgb(177, 209, 168);
+	color: rgb(202, 255, 198);
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -228,19 +311,21 @@ nav a:active {
 	width: 0%;
 	height: 2px;
 	text-shadow: none;
-	background: rgb(142, 180, 139);
+	background: rgb(177, 209, 168);
 	display: block;
 	margin: auto;
 	transition: 0.5s;
+	margin-top: -18px;
 }
 
 .nav-links a:hover::after {
 	width: 100%;
+	background: rgb(243, 255, 238);
 }
 
 .nav-links a:hover {
-	text-shadow: 0.5px 0.5px 1px rgb(62, 138, 57);
-	transition: 0.3s;
+	transition: 0.5s;
+	color: rgb(243, 255, 238);
 }
 
 /*----------------FOOTER------------*/
@@ -263,4 +348,42 @@ nav a:active {
 .footer p {
 	color: white;
 	margin-top: 30px;
+}
+
+.hide-section {
+	opacity: 0;
+	transition: all 1s;
+	transform-origin: center;
+	transform: scale(50%);
+}
+.show-section {
+	opacity: 1;
+	transform: scale(100%);
+}
+
+.pink-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 100px;
+	margin-bottom: -200px;
+}
+
+.pink-flowers {
+	margin-top: -100px;
+	height: 275px;
+	display: inline-block;
+	align-self: center;
+}
+
+.hide-flowers {
+	opacity: 0;
+	transition: all 1s;
+	transform-origin: center;
+	transform: scale(50%);
+}
+.show-flowers {
+	opacity: 1;
+	transform: scale(100%);
 }
